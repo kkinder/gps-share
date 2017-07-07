@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_share"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:showAsAction="always"
+        android:title="Share" />
+    <item
+        android:id="@+id/action_settings"
+        android:showAsAction="always"
+        android:icon="@drawable/settings"
+        android:title="@string/action_settings" />
+    <item android:id="@+id/map_type"
+        android:showAsAction="always"
+        android:icon="@drawable/menu"
+        android:title="@string/menu_map">
+        <menu>
+            <item android:id="@+id/action_hybrid"
+                android:title="@string/menu_hybrid" />
+            <item android:id="@+id/action_map"
+                android:title="@string/menu_street" />
+            <item android:id="@+id/action_terrain"
+                android:title="@string/menu_terrain" />
+            <item android:id="@+id/action_satellite"
+                android:title="@string/menu_satellite" />
+        </menu>
+    </item>
+</menu>

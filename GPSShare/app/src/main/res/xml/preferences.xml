@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_title">
+    <PreferenceCategory
+        android:key="pref_key_storage_settings"
+        android:title="@string/pref_message">
+        <CheckBoxPreference android:key="pref_include_text_enabled"
+            android:defaultValue="true"
+            android:summary="@string/pref_include_text_summary"
+            android:title="@string/pref_include_text" />
+        <EditTextPreference android:key="pref_message_text"
+            android:title="@string/pref_message_text"
+            android:defaultValue="@string/pref_message_text_default"
+            android:summary="@string/pref_message_text_summary"
+            android:dependency="pref_include_text_enabled"/>
+        <CheckBoxPreference android:key="pref_include_gps_coordinates"
+            android:defaultValue="true"
+            android:summary="@string/pref_include_gps_coordinates_summary"
+            android:title="@string/pref_include_gps_coordinates" />
+        <CheckBoxPreference android:key="pref_include_street_address"
+            android:defaultValue="true"
+            android:summary="@string/pref_include_street_address_summary"
+            android:title="@string/pref_include_street_address" />
+        <CheckBoxPreference android:key="pref_include_maps_link"
+            android:defaultValue="true"
+            android:summary="@string/pref_include_maps_link_summary"
+            android:title="@string/pref_include_maps_link" />
+        <CheckBoxPreference android:key="pref_include_app_link"
+            android:defaultValue="true"
+            android:summary="@string/pref_include_app_link"
+            android:title="@string/pref_include_app_link" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_key_meta"
+        android:title="@string/pref_meta">
+        <Preference android:title="@string/prefs_web_page" >
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://kkinder.com/gps-share/" />
+        </Preference>
+        <Preference android:title="@string/privacy_policy" >
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://kkinder.com/gps-share/privacy-policy/" />
+        </Preference>
+        <Preference android:title="@string/license_agreement" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.kkinder.sharelocation"
+                android:targetClass="com.kkinder.sharelocation.LicenseActivity" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

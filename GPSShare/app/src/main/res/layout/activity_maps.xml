@@ -1,0 +1,35 @@
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/map"
+    tools:context=".MapsActivity"
+    map:mapType="normal"
+    map:uiCompass="true"
+    map:uiRotateGestures="true"
+    map:uiScrollGestures="true"
+    map:uiZoomControls="true"
+    map:uiZoomGestures="true"
+    android:name="com.google.android.gms.maps.SupportMapFragment">
+    <ImageView
+        android:id="@+id/crosshair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/selector"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        style="@style/MapOverlay"
+
+        android:id="@+id/locationdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Share Location"
+        android:src="@drawable/recenter"
+        android:layout_gravity="left|top"
+
+        />
+
+    </fragment>
